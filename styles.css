@@ -1,0 +1,304 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+/***Navbar***/
+nav { 
+    position: fixed;
+    height: 150px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+nav.nav-change-height {
+    height: 100px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+nav h1 {
+    margin: 15px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+nav h1.h1-change-margin {
+    margin: 2px;
+    transition: 0.5s;
+    color: #000;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+nav ul.ul-change-margin {
+    margin: 1px;
+    transition: 0.5s;
+}
+
+nav ul li {
+    margin: 15px 30px;
+    transition: 0.5s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 5px;
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+nav ul li a.a-change-color {
+    color: #000;
+}
+
+nav ul li a:hover {
+    border: 1px solid #fff;
+    
+    font-size : 1.4rem;
+    transition: 0.5s;
+}
+
+nav ul li a.a-change-color:hover {
+    border: 1px solid #000;
+}
+
+/***title***/
+#title {
+    height: 100vh;
+    background: rgba(74, 76, 77, 1.0);
+    background: -webkit-linear-gradient(top left, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95));
+    background: -moz-linear-gradient(top left, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95));
+    background-image: linear-gradient(to bottom right, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95)), url(pics/eye-3.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 0;
+}
+
+#title .title-content{
+    height: 250px;
+    width: 100%;
+    background-color: rgba(38, 38, 38, 0.2);
+    color: #fff;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+/***services***/
+#services {
+    height: 100vh;
+    text-align: center;
+}
+
+#services h1 {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/***Services List***/
+#services .services-list {
+    position: absolute;
+    top: 135%;
+    left: 45%;
+    transform: translate(-50%, 0%);
+    text-align: left;
+}
+
+#services .services-list li {
+    list-style: none;
+    margin: 25px
+}
+
+#services .services-list li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/***Prices List***/
+#services .prices {
+    position: absolute;
+    top: 135%;
+    left: 55%;
+    transform: translate(-50%, 0%);
+}
+
+#services .prices li {
+    list-style: none;
+    margin: 25px;
+}
+
+#services .prices li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/***Gallery***/
+#gallery {
+    text-align: center;
+    min-height: 140vh;
+}
+
+#gallery h1 {
+    font-size: 2rem;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+#gallery .hex-gallery {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 14px;
+    padding-bottom: 50px;
+}
+
+/* images within hexagons */
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+#gallery .hexagon {
+    display: flex;
+    position: relative;
+    width: 240px;
+    height: 265px;
+    background-color: #424242;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+#gallery .hexagon:hover {
+    width: 250px;
+    height: 275px;
+    transition: 0.5s;
+}
+
+
+.hexagon:first-child {
+    grid-row-start: 1;
+    grid-column: 2 / span 2;
+}
+
+.hexagon:nth-child(2) {
+  grid-row-start: 1;
+  grid-column: 4 / span 2;
+}
+
+.hexagon:nth-child(3) {
+  grid-row-start: 1;
+  grid-column: 6 / span 2;
+}
+
+.hexagon:nth-child(4) {
+  grid-row-start: 2;
+  grid-column: 1 / span 2;
+}
+
+.hexagon:nth-child(5) {
+  grid-row-start: 2;
+  grid-column: 3 / span 2;
+}
+
+.hexagon:nth-child(6) {
+  grid-row-start: 2;
+  grid-column: 5 / span 2;
+}
+
+.hexagon:nth-child(7) {
+  grid-row-start: 2;
+  grid-column: 7 / span 2;
+}
+
+.hexagon:nth-child(8) {
+  grid-row-start: 3;
+  grid-column: 2 / span 2;
+}
+
+.hexagon:nth-child(9) {
+  grid-row-start: 3;
+  grid-column: 4 / span 2;
+}
+
+.hexagon:nth-child(10) {
+  grid-row-start: 3;
+  grid-column: 6 / span 2;
+}
+
+/***Contact Section***/
+#contact {
+    height: 50vh;
+    background-color: #000;
+}
+
+.contact-icons ul {
+    position: absolute;
+    top: 385%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    color: white;
+}
+
+.contact-icons ul li {
+    list-style: none;
+    margin: 30px;
+}
+
+/*Phone*/
+.contact-icons ul li.phone:hover {
+    color: green;
+    transition: 0.5s;
+}
+/*Facebook*/
+.contact-icons ul li.facebook:hover {
+    color: #405de6;
+    transition: 0.5s;
+}
+/*Twitter*/
+.contact-icons ul li.twitter:hover {
+    color: #00acee;
+    transition: 0.5s;
+}
+/*Insta*/
+.contact-icons ul li.instagram:hover {
+    color: #C13584; 
+    transition: 0.5s;
+}
+
+
+
