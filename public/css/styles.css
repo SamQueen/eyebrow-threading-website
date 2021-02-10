@@ -86,7 +86,7 @@ nav ul li a.a-change-color:hover {
     background: rgba(74, 76, 77, 1.0);
     background: -webkit-linear-gradient(top left, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95));
     background: -moz-linear-gradient(top left, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95));
-    background-image: linear-gradient(to bottom right, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95)), url(pics/eye-3.jpg);
+    background-image: linear-gradient(to bottom right, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95)), url(/pics/eye-3.jpg);
     background-size: cover;
     background-position: 50% 50%;
     margin: 0;
@@ -262,15 +262,19 @@ img {
 
 /***Contact Section***/
 #contact {
-    height: 50vh;
+    height: 25vh;
     background-color: #000;
 }
 
+.contact-icons {
+    position: relative;
+    top: 30%;
+}
+
 .contact-icons ul {
-    position: absolute;
-    top: 385%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    width: auto;
+    margin: 0 auto;
     display: flex;
     color: white;
 }
@@ -304,6 +308,10 @@ img {
 
 /*Mobile Nav*/
 .mobile-nav {
+    display: none;
+}
+
+.mobile-gallery {
     display: none;
 }
 
@@ -382,27 +390,26 @@ img {
     
     
     /*Responsice Gallery Section*/
-    #gallery .hexagon {
-    display: flex;
-    position: relative;
-    width: 80px;
-    height: 105px;
-    background-color: #424242;
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    cursor: pointer;
-    transition: 0.5s;
-}
-    
-    #gallery .hexagon:hover {
-        width: 140px;
-    height: 165px;
+    #gallery .hex-gallery {
+        display: none;
     }
-
+    
+    .mobile-gallery {
+        display: block;
+    }
+    
+    .mobile-gallery .pic img {
+        height: 200px;
+        width: 200px;
+        margin: 50px auto;
+    }
+    
     
     #contact {
-        margin-top: 75%;
+       margin-top: 50%;
     }
+    
+    
     
 }
 
