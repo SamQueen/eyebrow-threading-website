@@ -82,6 +82,7 @@ nav ul li a.a-change-color:hover {
 /***title***/
 #title {
     height: 100vh;
+    width: 100%;
     background: rgba(74, 76, 77, 1.0);
     background: -webkit-linear-gradient(top left, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95));
     background: -moz-linear-gradient(top left, rgba(74, 76, 77, 0.5), rgba(0, 0, 0, 0.95));
@@ -300,5 +301,109 @@ img {
     transition: 0.5s;
 }
 
+
+/*Mobile Nav*/
+.mobile-nav {
+    display: none;
+}
+
+/***********Tablet Design******************/
+@media only screen and (max-width: 1000px) {
+    
+    /*Responsive nav*/
+    nav {
+        display: none;
+    }
+    
+    .mobile-nav {
+        display: block;
+        position: fixed;
+        width: 100%;
+        background-color: #000;
+        height: 100px;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    
+    .mobile-nav.increase-height {
+        height: 275px;
+        transition: 0.3s;
+    }
+    
+    .mobile-nav-headings {
+        margin: 20px 30px;
+    }
+    
+    .mobile-nav-headings h1 {
+        display: inline;
+        color: #fff;
+        line-height: 2em;
+    }
+    
+    .mobile-nav-headings h3 {
+        display: inline;
+        color: #fff;
+        float: right;
+        line-height: 2em;
+        cursor: pointer;
+    }
+    
+    .mobile-nav ul {
+        display: none;
+    }
+    
+    .mobile-nav ul.show-ul {
+        display: block;
+        text-align: center;
+    }
+    
+    
+    .mobile-nav ul.show-ul li {
+        list-style: none;
+        margin: 15px;
+    }
+    
+    .mobile-nav ul.show-ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1rem;
+    }
+    
+    .mobile-nav ul.show-ul li a:hover {
+        color: lightblue;
+        transition: 0.5s;
+    }
+    
+    
+    /*Responsive Services Section*/
+    #services .services-list li { 
+    margin-right: 60px
+    }
+    
+    
+    /*Responsice Gallery Section*/
+    #gallery .hexagon {
+    display: flex;
+    position: relative;
+    width: 80px;
+    height: 105px;
+    background-color: #424242;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+    
+    #gallery .hexagon:hover {
+        width: 140px;
+    height: 165px;
+    }
+
+    
+    #contact {
+        margin-top: 75%;
+    }
+    
+}
 
 
